@@ -11,7 +11,7 @@ bool greatcmp(const int &a, const int &b)
     return a >= b;
 }
 
-// 结构体
+// 学生结构体
 struct student
 {
     string name;
@@ -32,15 +32,16 @@ int main()
     // sort(a, a + 10, greater<int>());   // Log(逆序：从大到小)
     // sort(a, a + 10, greatcmp);  //逆序的比较函数写法
     // PrintArray(a, 10);
-
-    student stus[5] = {
+    int count = 6;
+    student stus[count] = {
         {"Y", 1, 18},
         {"王子", 1, 1},
         {"张意味", 0, 3},
         {"勋基哈", 1, 17},
-        {"甲", 0, 20}
+        {"甲", 0, 20},
+        {"zjh", 0, 7}
     };
-    sort(stus, stus + 5, student::stucmp);
+    sort(stus, stus + count, student::stucmp);
     for (student person : stus)
     {
         Log(person.name);
